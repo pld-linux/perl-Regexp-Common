@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Regexp
 %define	pnam	Common
@@ -47,11 +48,12 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
  
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-perl -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
+%{__perl} -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
 
 %build
 %{__perl} Makefile.PL
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
