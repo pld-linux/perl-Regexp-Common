@@ -4,10 +4,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Regexp
 %define	pnam	Common
-Summary:	Regexp::Common perl module - commonly requested regular expressions
-Summary(pl):	Modu³ perla Regexp::Common - czêsto u¿ywane wyra¿enia regularne
+Summary:	Regexp::Common Perl module - commonly requested regular expressions
+Summary(pl):	Modu³ Perla Regexp::Common - czêsto u¿ywane wyra¿enia regularne
 Name:		perl-Regexp-Common
-Version:	2.109
+Version:	2.110
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
@@ -16,6 +16,9 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# not recognized for unknown reason
+%define		_noautoreq	'perl(Regexp::Common::URI)'
 
 %description
 This package contains Regexp::Common module that stores or generates
@@ -44,6 +47,7 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
  
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+perl -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
 
 %build
 perl Makefile.PL
