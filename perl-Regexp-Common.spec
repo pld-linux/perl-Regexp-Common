@@ -1,10 +1,13 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Regexp
 %define	pnam	Common
 Summary:	Regexp::Common perl module - commonly requested regular expressions
 Summary(pl):	Modu³ perla Regexp::Common - czêsto u¿ywane wyra¿enia regularne
 Name:		perl-Regexp-Common
-Version:	0.01
+Version:	0.09
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
@@ -40,10 +43,12 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
  
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+perl -pi -e 's/5\.00473/5.004_73/' lib/Regexp/Common.pm
 
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -57,5 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Regexp/Common.pm
+%{perl_sitelib}/%{pdir}/*.pm
+%{perl_sitelib}/%{pdir}/%{pnam}
 %{_mandir}/man3/*
