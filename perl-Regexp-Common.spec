@@ -7,7 +7,7 @@
 Summary:	Regexp::Common perl module - commonly requested regular expressions
 Summary(pl):	Modu³ perla Regexp::Common - czêsto u¿ywane wyra¿enia regularne
 Name:		perl-Regexp-Common
-Version:	0.09
+Version:	1.20
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
@@ -25,21 +25,22 @@ include:
  * delimited text (with escapes)
  * integers and floating-point numbers in any base (up to 36)
  * comments in C, C++, Perl, and shell
- * offensive language (English only)
+ * offensive language
  * lists of any pattern
  * IPv4 addresses
-			    
+ * URIs
+
 %description -l pl
 Ten pakiet zawiera modu³ Regexp::Common, który zawiera lub generuje
 czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
- - zrównowa¿onych nawiasów
- - ograniczonego tekstu (z cytowaniem)
- - liczb ca³kowitych i zmiennoprzecinkowych o dowolnej podstawie (do
-   36)
- - komentarzy w C, C++, Perlu i shellu
- - s³ów obra¼liwych (w jêzyku angielskim)
- - list o dowolnym wzorcu
- - adresów IPv4.
+ * zrównowa¿onych nawiasów
+ * ograniczonego tekstu (z cytowaniem)
+ * liczb ca³kowitych i zmiennoprzecinkowych o dowolnej podstawie (do 36)
+ * komentarzy w C, C++, Perlu i shellu
+ * s³ów obra¼liwych (w jêzyku angielskim)
+ * list o dowolnym wzorcu
+ * adresów IPv4.
+ * URI
  
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
