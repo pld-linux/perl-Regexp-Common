@@ -46,14 +46,14 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
  * list o dowolnym wzorcu
  * adresów IPv4.
  * URI
- 
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %{__perl} -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
