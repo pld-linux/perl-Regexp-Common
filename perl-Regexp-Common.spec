@@ -14,7 +14,6 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	1ccecab99f7ae4f42c3428f07d5f8731
-Patch0:		%{name}-test.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -50,8 +49,6 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-# Not sure if this patch is still needed
-#%patch0 -p1
 
 %{__perl} -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
 
