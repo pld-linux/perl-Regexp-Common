@@ -50,7 +50,7 @@ czêsto potrzebne wyra¿enia regularne. Aktualnie zawiera wzorce dla:
 perl -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 %{!?_without_tests:%{__make} test}
 
