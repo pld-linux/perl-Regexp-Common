@@ -6,7 +6,7 @@
 %define		pdir	Regexp
 %define		pnam	Common
 Summary:	Regexp::Common Perl module - commonly requested regular expressions
-Summary(pl):	Modu≥ Perla Regexp::Common - czÍsto uøywane wyraøenia regularne
+Summary(pl.UTF-8):   Modu≈Ç Perla Regexp::Common - czƒôsto u≈ºywane wyra≈ºenia regularne
 Name:		perl-Regexp-Common
 Version:	2.120
 Release:	1
@@ -35,16 +35,16 @@ include:
  * IPv4 addresses
  * URIs
 
-%description -l pl
-Ten pakiet zawiera modu≥ Regexp::Common, ktÛry zawiera lub generuje
-czÍsto potrzebne wyraøenia regularne. Aktualnie zawiera wzorce dla:
- * zrÛwnowaøonych nawiasÛw
+%description -l pl.UTF-8
+Ten pakiet zawiera modu≈Ç Regexp::Common, kt√≥ry zawiera lub generuje
+czƒôsto potrzebne wyra≈ºenia regularne. Aktualnie zawiera wzorce dla:
+ * zr√≥wnowa≈ºonych nawias√≥w
  * ograniczonego tekstu (z cytowaniem)
- * liczb ca≥kowitych i zmiennoprzecinkowych o dowolnej podstawie (do 36)
+ * liczb ca≈Çkowitych i zmiennoprzecinkowych o dowolnej podstawie (do 36)
  * komentarzy w C, C++, Perlu i shellu
- * s≥Ûw obraºliwych (w jÍzyku angielskim)
+ * s≈Ç√≥w obra≈∫liwych (w jƒôzyku angielskim)
  * list o dowolnym wzorcu
- * adresÛw IPv4.
+ * adres√≥w IPv4.
  * URI
 
 %prep
