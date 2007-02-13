@@ -6,7 +6,7 @@
 %define		pdir	Regexp
 %define		pnam	Common
 Summary:	Regexp::Common Perl module - commonly requested regular expressions
-Summary(pl.UTF-8):   Moduł Perla Regexp::Common - często używane wyrażenia regularne
+Summary(pl.UTF-8):	Moduł Perla Regexp::Common - często używane wyrażenia regularne
 Name:		perl-Regexp-Common
 Version:	2.120
 Release:	1
