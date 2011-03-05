@@ -8,12 +8,13 @@
 Summary:	Regexp::Common Perl module - commonly requested regular expressions
 Summary(pl.UTF-8):	Moduł Perla Regexp::Common - często używane wyrażenia regularne
 Name:		perl-Regexp-Common
-Version:	2.122
+Version:	2010010201
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fdd82fb77f2ef7f85aefd7cfb5107729
+Source0:	http://www.cpan.org/modules/by-module/Regexp/ABIGAIL/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	e4267a626af781ed62c696f05b2b60f3
+URL:		http://search.cpan.org/dist/Regexp-Common/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -50,8 +51,6 @@ często potrzebne wyrażenia regularne. Aktualnie zawiera wzorce dla:
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
-%{__perl} -pi -e 's/^(use 5.004)(73;)(.*)$/$1_$2$3/' lib/Regexp/Common.pm
-
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
@@ -71,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO
-%{perl_vendorlib}/Regexp/*.pm
+%{perl_vendorlib}/Regexp/Common.pm
 %{perl_vendorlib}/Regexp/Common
-%{_mandir}/man3/*
+%{_mandir}/man3/Regexp::Common*.3pm*
