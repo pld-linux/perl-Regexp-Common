@@ -8,12 +8,12 @@
 Summary:	Regexp::Common Perl module - commonly requested regular expressions
 Summary(pl.UTF-8):	Moduł Perla Regexp::Common - często używane wyrażenia regularne
 Name:		perl-Regexp-Common
-Version:	2011041701
+Version:	2011121001
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Regexp/ABIGAIL/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7e6bef3eefff91ecb2f07b1e81217650
+# Source0-md5:	9e6a8fed514017589f44cde02b947ac5
 URL:		http://search.cpan.org/dist/Regexp-Common/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
