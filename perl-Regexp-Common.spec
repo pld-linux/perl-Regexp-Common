@@ -12,7 +12,7 @@ Version:	2011121001
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Regexp/ABIGAIL/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Regexp/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9e6a8fed514017589f44cde02b947ac5
 URL:		http://search.cpan.org/dist/Regexp-Common/
 BuildRequires:	perl-devel >= 1:5.8.0
