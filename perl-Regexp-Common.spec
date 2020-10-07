@@ -9,14 +9,14 @@ Summary(pl.UTF-8):	Moduł Perla Regexp::Common - często używane wyrażenia reg
 Name:		perl-Regexp-Common
 Version:	2017060201
 Release:	1
-License:	Artistic
+License:	Artistic or Artistic v2.0 or BSD or MIT
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Regexp/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b1bb40759b84154990f36a160160fb94
-URL:		http://search.cpan.org/dist/Regexp-Common/
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		https://metacpan.org/release/Regexp-Common
+BuildRequires:	perl-devel >= 1:5.10.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	rpmbuild(macros) >= 1.663
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO
+%doc COPYRIGHT.BSD COPYRIGHT.MIT Changes LICENSE README TODO
 %{perl_vendorlib}/Regexp/Common.pm
 %{perl_vendorlib}/Regexp/Common
 %{_mandir}/man3/Regexp::Common*.3pm*
