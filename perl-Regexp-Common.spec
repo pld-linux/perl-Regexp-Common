@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Regexp
 %define		pnam	Common
 Summary:	Regexp::Common Perl module - commonly requested regular expressions
 Summary(pl.UTF-8):	Moduł Perla Regexp::Common - często używane wyrażenia regularne
 Name:		perl-Regexp-Common
-Version:	2017060201
+Version:	2024080801
 Release:	1
 License:	Artistic or Artistic v2.0 or BSD or MIT
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Regexp/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b1bb40759b84154990f36a160160fb94
-URL:		https://metacpan.org/release/Regexp-Common
+Source0:	https://www.cpan.org/modules/by-module/Regexp/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	73d4b4b2a0690f9ab573d54a69c22aee
+URL:		https://metacpan.org/dist/Regexp-Common
 BuildRequires:	perl-devel >= 1:5.10.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
@@ -54,6 +54,7 @@ często potrzebne wyrażenia regularne. Aktualnie zawiera wzorce dla:
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make}
 
 %{?with_tests:%{__make} test}
